@@ -1,0 +1,425 @@
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING> streamlit run app.py
+
+      Welcome to Streamlit!
+
+      If you’d like to receive helpful onboarding emails, news, offers, promotions,
+      and the occasional swag, please enter your email address below. Otherwise,   
+      leave this field blank.
+
+      Email:  nikhildesale12@gmail.com
+
+  You can find our privacy policy at https://streamlit.io/privacy-policy
+
+  Summary:
+  - This open source library collects usage statistics.
+  - We cannot see and do not store information contained inside Streamlit apps,
+    such as text, charts, images, etc.
+  - Telemetry data is stored in servers in the United States.
+  - If you'd like to opt out, add the following to %userprofile%/.streamlit/config.toml,
+    creating that file if necessary:
+
+    [browser]
+    gatherUsageStats = false
+
+
+  You can now view your Streamlit app in your browser.
+  Network URL: http://192.168.1.14:8501
+
+2024-04-26 15:41:38.505 Uncaught app exception
+Traceback (most recent call last):
+  File "C:\Users\NILI\anaconda3\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 542, in _run_script
+    exec(code, module.__dict__)
+  File "C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING\app.py", line 3, in <module>
+    from utils import *
+  File "C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING\utils.py", line 1, in <module>
+    from langchain.vectorstores import Pinecone
+ModuleNotFoundError: No module named 'langchain'
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "C:\Users\NILI\anaconda3\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\NILI\anaconda3\Lib\site-packages\watchdog\observers\api.py", line 199, in run
+    self.dispatch_events(self.event_queue, self.timeout)
+  File "C:\Users\NILI\anaconda3\Lib\site-packages\watchdog\observers\api.py", line 372, in dispatch_events
+    handler.dispatch(event)
+  File "C:\Users\NILI\anaconda3\Lib\site-packages\watchdog\events.py", line 272, in dispatch
+    {
+  File "C:\Users\NILI\anaconda3\Lib\site-packages\streamlit\watcher\event_based_path_watcher.py", line 379, in on_created
+    self.handle_path_change_event(event)
+  File "C:\Users\NILI\anaconda3\Lib\site-packages\streamlit\watcher\event_based_path_watcher.py", line 365, in handle_path_change_event
+    new_md5 = util.calc_md5_with_blocking_retries(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NILI\anaconda3\Lib\site-packages\streamlit\watcher\util.py", line 59, in calc_md5_with_blocking_retries
+    content = _get_file_content_with_blocking_retries(path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NILI\anaconda3\Lib\site-packages\streamlit\watcher\util.py", line 94, in _get_file_content_with_blocking_retries
+    with open(file_path, "rb") as f:
+         ^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\NILI\\Desktop\\Code-Games-2024\\Code\\HR-RESUME-SCREENING\\app.py'
+
+ *  History restored 
+
+At line:1 char:1
++ pyhonn --version
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (pyhonn:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING> pip install -upgrade langchain
+ERROR: Invalid requirement: '–upgrade'
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING> pip install langchain
+Collecting langchain
+  Downloading langchain-0.1.16-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: PyYAML>=5.3 in c:\users\nili\anaconda3\lib\site-packages (from langchain) (6.0.1)
+Requirement already satisfied: SQLAlchemy<3,>=1.4 in c:\users\nili\anaconda3\lib\site-packages (from langchain) (2.0.25)
+Requirement already satisfied: aiohttp<4.0.0,>=3.8.3 in c:\users\nili\anaconda3\lib\site-packages (from langchain) (3.9.3)
+Collecting dataclasses-json<0.7,>=0.5.7 (from langchain)
+  Downloading dataclasses_json-0.6.4-py3-none-any.whl.metadata (25 kB)
+Collecting jsonpatch<2.0,>=1.33 (from langchain)
+  Downloading jsonpatch-1.33-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting langchain-community<0.1,>=0.0.32 (from langchain)
+  Downloading langchain_community-0.0.34-py3-none-any.whl.metadata (8.5 kB)
+Collecting langchain-core<0.2.0,>=0.1.42 (from langchain)
+  Downloading langchain_core-0.1.46-py3-none-any.whl.metadata (5.9 kB)
+Collecting langchain-text-splitters<0.1,>=0.0.1 (from langchain)
+  Downloading langchain_text_splitters-0.0.1-py3-none-any.whl.metadata (2.0 kB)
+Collecting langsmith<0.2.0,>=0.1.17 (from langchain)
+  Downloading langsmith-0.1.51-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: numpy<2,>=1 in c:\users\nili\anaconda3\lib\site-packages (from langchain) (1.26.4)
+Requirement already satisfied: pydantic<3,>=1 in c:\users\nili\anaconda3\lib\site-packages (from langchain) (1.10.12)
+Requirement already satisfied: requests<3,>=2 in c:\users\nili\anaconda3\lib\site-packages (from langchain) (2.31.0)
+Requirement already satisfied: tenacity<9.0.0,>=8.1.0 in c:\users\nili\anaconda3\lib\site-packages (from langchain) (8.2.2)
+Requirement already satisfied: aiosignal>=1.1.2 in c:\users\nili\anaconda3\lib\site-packages (from aiohttp<4.0.0,>=3.8.3->langchain) (1.2.0)
+Requirement already satisfied: attrs>=17.3.0 in c:\users\nili\anaconda3\lib\site-packages (from aiohttp<4.0.0,>=3.8.3->langchain) (23.1.0)
+Requirement already satisfied: frozenlist>=1.1.1 in c:\users\nili\anaconda3\lib\site-packages (from aiohttp<4.0.0,>=3.8.3->langchain) (1.4.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in c:\users\nili\anaconda3\lib\site-packages (from aiohttp<4.0.0,>=3.8.3->langchain) (6.0.4)
+Requirement already satisfied: yarl<2.0,>=1.0 in c:\users\nili\anaconda3\lib\site-packages (from aiohttp<4.0.0,>=3.8.3->langchain) (1.9.3)
+Collecting marshmallow<4.0.0,>=3.18.0 (from dataclasses-json<0.7,>=0.5.7->langchain)
+  Downloading marshmallow-3.21.1-py3-none-any.whl.metadata (7.2 kB)
+Collecting typing-inspect<1,>=0.4.0 (from dataclasses-json<0.7,>=0.5.7->langchain)
+  Downloading typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+Requirement already satisfied: jsonpointer>=1.9 in c:\users\nili\anaconda3\lib\site-packages (from jsonpatch<2.0,>=1.33->langchain) (2.1)
+Collecting packaging<24.0,>=23.2 (from langchain-core<0.2.0,>=0.1.42->langchain)
+  Downloading packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting orjson<4.0.0,>=3.9.14 (from langsmith<0.2.0,>=0.1.17->langchain)
+  Downloading orjson-3.10.1-cp311-none-win_amd64.whl.metadata (50 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.9/50.9 kB 61.9 kB/s eta 0:00:00
+Requirement already satisfied: typing-extensions>=4.2.0 in c:\users\nili\anaconda3\lib\site-packages (from pydantic<3,>=1->langchain) (4.9.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\nili\anaconda3\lib\site-packages (from requests<3,>=2->langchain) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\nili\anaconda3\lib\site-packages (from requests<3,>=2->langchain) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\nili\anaconda3\lib\site-packages (from requests<3,>=2->langchain) (2.0.7)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\nili\anaconda3\lib\site-packages (from requests<3,>=2->langchain) (2024.2.2)
+Requirement already satisfied: greenlet!=0.4.17 in c:\users\nili\anaconda3\lib\site-packages (from SQLAlchemy<3,>=1.4->langchain) (3.0.1)
+Requirement already satisfied: mypy-extensions>=0.3.0 in c:\users\nili\anaconda3\lib\site-packages (from typing-inspect<1,>=0.4.0->dataclasses-json<0.7,>=0.5.7->langchain) (1.0.0)
+Downloading langchain-0.1.16-py3-none-any.whl (817 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 817.7/817.7 kB 2.5 MB/s eta 0:00:00
+Downloading dataclasses_json-0.6.4-py3-none-any.whl (28 kB)
+Downloading jsonpatch-1.33-py2.py3-none-any.whl (12 kB)
+Downloading langchain_community-0.0.34-py3-none-any.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 4.1 MB/s eta 0:00:00
+Downloading langchain_core-0.1.46-py3-none-any.whl (299 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 299.3/299.3 kB 1.5 MB/s eta 0:00:00
+Downloading langchain_text_splitters-0.0.1-py3-none-any.whl (21 kB)
+Downloading langsmith-0.1.51-py3-none-any.whl (115 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.0/116.0 kB 845.8 kB/s eta 0:00:00
+Downloading marshmallow-3.21.1-py3-none-any.whl (49 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.4/49.4 kB 167.2 kB/s eta 0:00:00
+Downloading orjson-3.10.1-cp311-none-win_amd64.whl (139 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.1/139.1 kB 433.8 kB/s eta 0:00:00
+Downloading packaging-23.2-py3-none-any.whl (53 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.0/53.0 kB 272.4 kB/s eta 0:00:00
+Downloading typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+Installing collected packages: typing-inspect, packaging, orjson, jsonpatch, marshmallow, langsmith, langchain-core, dataclasses-json, langchain-text-splitters, langchain-community, langchain
+  Attempting uninstall: packaging
+    Found existing installation: packaging 23.1
+    Uninstalling packaging-23.1:
+      Successfully uninstalled packaging-23.1
+  Attempting uninstall: jsonpatch
+    Found existing installation: jsonpatch 1.32
+    Uninstalling jsonpatch-1.32:
+      Successfully uninstalled jsonpatch-1.32
+Successfully installed dataclasses-json-0.6.4 jsonpatch-1.33 langchain-0.1.16 langchain-community-0.0.34 langchain-core-0.1.46 langchain-text-splitters-0.0.1 langsmith-0.1.51 marshmallow-3.21.1 orjson-3.10.1 packaging-23.2 typing-inspect-0.9.0
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING> python -m pip install pypdf          
+Collecting pypdf
+  Downloading pypdf-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Downloading pypdf-4.2.0-py3-none-any.whl (290 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 290.4/290.4 kB 851.7 kB/s eta 0:00:00
+Installing collected packages: pypdf
+Successfully installed pypdf-4.2.0
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING>
+
+
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING> pip install tiktoken
+Collecting tiktoken
+  Downloading tiktoken-0.6.0-cp311-cp311-win_amd64.whl.metadata (6.8 kB)
+Requirement already satisfied: regex>=2022.1.18 in c:\users\nili\anaconda3\lib\site-packages (from tiktoken) (2023.10.3)
+Requirement already satisfied: requests>=2.26.0 in c:\users\nili\anaconda3\lib\site-packages (from tiktoken) (2.31.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\nili\anaconda3\lib\site-packages (from requests>=2.26.0->tiktoken) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\nili\anaconda3\lib\site-packages (from requests>=2.26.0->tiktoken) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\nili\anaconda3\lib\site-packages (from requests>=2.26.0->tiktoken) (2.0.7)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\nili\anaconda3\lib\site-packages (from requests>=2.26.0->tiktoken) (2024.2.2)
+Downloading tiktoken-0.6.0-cp311-cp311-win_amd64.whl (798 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 798.7/798.7 kB 1.8 MB/s eta 0:00:00
+Installing collected packages: tiktoken
+Successfully installed tiktoken-0.6.0
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING> pip install python-dotenv
+Requirement already satisfied: python-dotenv in c:\users\nili\anaconda3\lib\site-packages (0.21.0)
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING> pip install unstructured 
+Collecting unstructured
+  Downloading unstructured-0.13.4-py3-none-any.whl.metadata (30 kB)
+Requirement already satisfied: chardet in c:\users\nili\anaconda3\lib\site-packages (from unstructured) (4.0.0)
+Collecting filetype (from unstructured)
+  Downloading filetype-1.2.0-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting python-magic (from unstructured)
+  Downloading python_magic-0.4.27-py2.py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: lxml in c:\users\nili\anaconda3\lib\site-packages (from unstructured) (4.9.3)
+Requirement already satisfied: nltk in c:\users\nili\anaconda3\lib\site-packages (from unstructured) (3.8.1)
+Requirement already satisfied: tabulate in c:\users\nili\anaconda3\lib\site-packages (from unstructured) (0.9.0)
+Requirement already satisfied: requests in c:\users\nili\anaconda3\lib\site-packages (from unstructured) (2.31.0)
+Requirement already satisfied: beautifulsoup4 in c:\users\nili\anaconda3\lib\site-packages (from unstructured) (4.12.2)
+Collecting emoji (from unstructured)
+  Downloading emoji-2.11.1-py2.py3-none-any.whl.metadata (5.3 kB)
+Requirement already satisfied: dataclasses-json in c:\users\nili\anaconda3\lib\site-packages (from unstructured) (0.6.4)
+Collecting python-iso639 (from unstructured)
+  Downloading python_iso639-2024.2.7-py3-none-any.whl.metadata (13 kB)
+Collecting langdetect (from unstructured)
+  Downloading langdetect-1.0.9.tar.gz (981 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 981.5/981.5 kB 1.8 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: numpy in c:\users\nili\anaconda3\lib\site-packages (from unstructured) (1.26.4)
+Collecting rapidfuzz (from unstructured)
+  Downloading rapidfuzz-3.8.1-cp311-cp311-win_amd64.whl.metadata (11 kB)
+Collecting backoff (from unstructured)
+  Downloading backoff-2.2.1-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: typing-extensions in c:\users\nili\anaconda3\lib\site-packages (from unstructured) (4.9.0)
+Collecting unstructured-client (from unstructured)
+  Downloading unstructured_client-0.22.0-py3-none-any.whl.metadata (7.3 kB)
+Requirement already satisfied: wrapt in c:\users\nili\anaconda3\lib\site-packages (from unstructured) (1.14.1)
+Requirement already satisfied: soupsieve>1.2 in c:\users\nili\anaconda3\lib\site-packages (from beautifulsoup4->unstructured) (2.5)
+Requirement already satisfied: marshmallow<4.0.0,>=3.18.0 in c:\users\nili\anaconda3\lib\site-packages (from dataclasses-json->unstructured) (3.21.1)
+Requirement already satisfied: typing-inspect<1,>=0.4.0 in c:\users\nili\anaconda3\lib\site-packages (from dataclasses-json->unstructured) (0.9.0)
+Requirement already satisfied: six in c:\users\nili\anaconda3\lib\site-packages (from langdetect->unstructured) (1.16.0)
+Requirement already satisfied: click in c:\users\nili\anaconda3\lib\site-packages (from nltk->unstructured) (8.1.7)
+Requirement already satisfied: joblib in c:\users\nili\anaconda3\lib\site-packages (from nltk->unstructured) (1.2.0)
+Requirement already satisfied: regex>=2021.8.3 in c:\users\nili\anaconda3\lib\site-packages (from nltk->unstructured) (2023.10.3)
+Requirement already satisfied: tqdm in c:\users\nili\anaconda3\lib\site-packages (from nltk->unstructured) (4.65.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\nili\anaconda3\lib\site-packages (from requests->unstructured) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\nili\anaconda3\lib\site-packages (from requests->unstructured) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\nili\anaconda3\lib\site-packages (from requests->unstructured) (2.0.7)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\nili\anaconda3\lib\site-packages (from requests->unstructured) (2024.2.2)
+Collecting charset-normalizer<4,>=2 (from requests->unstructured)
+  Downloading charset_normalizer-3.3.2-cp311-cp311-win_amd64.whl.metadata (34 kB)
+Collecting deepdiff>=6.0 (from unstructured-client->unstructured)
+  Downloading deepdiff-7.0.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting jsonpath-python>=1.0.6 (from unstructured-client->unstructured)
+  Downloading jsonpath_python-1.0.6-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: mypy-extensions>=1.0.0 in c:\users\nili\anaconda3\lib\site-packages (from unstructured-client->unstructured) (1.0.0)
+Requirement already satisfied: packaging>=23.1 in c:\users\nili\anaconda3\lib\site-packages (from unstructured-client->unstructured) (23.2)
+Requirement already satisfied: pypdf>=4.0 in c:\users\nili\anaconda3\lib\site-packages (from unstructured-client->unstructured) (4.2.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\nili\anaconda3\lib\site-packages (from unstructured-client->unstructured) (2.8.2)
+Collecting ordered-set<4.2.0,>=4.1.0 (from deepdiff>=6.0->unstructured-client->unstructured)
+  Downloading ordered_set-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+Requirement already satisfied: colorama in c:\users\nili\anaconda3\lib\site-packages (from click->nltk->unstructured) (0.4.6)
+Downloading unstructured-0.13.4-py3-none-any.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 4.7 MB/s eta 0:00:00
+Downloading backoff-2.2.1-py3-none-any.whl (15 kB)
+Downloading emoji-2.11.1-py2.py3-none-any.whl (433 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 433.8/433.8 kB 1.7 MB/s eta 0:00:00
+Downloading filetype-1.2.0-py2.py3-none-any.whl (19 kB)
+Downloading python_iso639-2024.2.7-py3-none-any.whl (274 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 274.7/274.7 kB 2.8 MB/s eta 0:00:00
+Downloading python_magic-0.4.27-py2.py3-none-any.whl (13 kB)
+Downloading rapidfuzz-3.8.1-cp311-cp311-win_amd64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 3.8 MB/s eta 0:00:00
+Downloading unstructured_client-0.22.0-py3-none-any.whl (28 kB)
+Downloading charset_normalizer-3.3.2-cp311-cp311-win_amd64.whl (99 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.9/99.9 kB 635.7 kB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.8/80.8 kB 410.4 kB/s eta 0:00:00
+Downloading jsonpath_python-1.0.6-py3-none-any.whl (7.6 kB)
+Downloading ordered_set-4.1.0-py3-none-any.whl (7.6 kB)
+Building wheels for collected packages: langdetect
+  Building wheel for langdetect (setup.py) ... done
+  Created wheel for langdetect: filename=langdetect-1.0.9-py3-none-any.whl size=993253 sha256=53e01d9fe1368373f09abe4bdfad64010e8a04bc5e1dc1c2de025085f96e14a0       
+  Stored in directory: c:\users\nili\appdata\local\pip\cache\wheels\0a\f2\b2\e5ca405801e05eb7c8ed5b3b4bcf1fcabcd6272c167640072e
+Successfully built langdetect
+Installing collected packages: filetype, rapidfuzz, python-magic, python-iso639, ordered-set, langdetect, jsonpath-python, emoji, charset-normalizer, backoff, deepdiff, unstructured-client, unstructured
+  Attempting uninstall: charset-normalizer
+    Found existing installation: charset-normalizer 2.0.4
+    Uninstalling charset-normalizer-2.0.4:
+      Successfully uninstalled charset-normalizer-2.0.4
+Successfully installed backoff-2.2.1 charset-normalizer-3.3.2 deepdiff-7.0.1 emoji-2.11.1 filetype-1.2.0 jsonpath-python-1.0.6 langdetect-1.0.9 ordered-set-4.1.0 python-iso639-2024.2.7 python-magic-0.4.27 rapidfuzz-3.8.1 unstructured-0.13.4 unstructured-client-0.22.0
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING> pip install sentence-transformers
+Collecting sentence-transformers
+  Downloading sentence_transformers-2.7.0-py3-none-any.whl.metadata (11 kB)
+Collecting transformers<5.0.0,>=4.34.0 (from sentence-transformers)
+  Downloading transformers-4.40.1-py3-none-any.whl.metadata (137 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 138.0/138.0 kB 545.9 kB/s eta 0:00:00
+Requirement already satisfied: tqdm in c:\users\nili\anaconda3\lib\site-packages (from sentence-transformers) (4.65.0)
+Collecting torch>=1.11.0 (from sentence-transformers)
+  Downloading torch-2.3.0-cp311-cp311-win_amd64.whl.metadata (26 kB)
+Requirement already satisfied: numpy in c:\users\nili\anaconda3\lib\site-packages (from sentence-transformers) (1.26.4)
+Requirement already satisfied: scikit-learn in c:\users\nili\anaconda3\lib\site-packages (from sentence-transformers) (1.2.2)
+Requirement already satisfied: scipy in c:\users\nili\anaconda3\lib\site-packages (from sentence-transformers) (1.11.4)
+Collecting huggingface-hub>=0.15.1 (from sentence-transformers)
+  Downloading huggingface_hub-0.22.2-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: Pillow in c:\users\nili\anaconda3\lib\site-packages (from sentence-transformers) (10.2.0)
+Requirement already satisfied: filelock in c:\users\nili\anaconda3\lib\site-packages (from huggingface-hub>=0.15.1->sentence-transformers) (3.13.1)
+Requirement already satisfied: fsspec>=2023.5.0 in c:\users\nili\anaconda3\lib\site-packages (from huggingface-hub>=0.15.1->sentence-transformers) (2023.10.0)
+Requirement already satisfied: packaging>=20.9 in c:\users\nili\anaconda3\lib\site-packages (from huggingface-hub>=0.15.1->sentence-transformers) (23.2)
+Requirement already satisfied: pyyaml>=5.1 in c:\users\nili\anaconda3\lib\site-packages (from huggingface-hub>=0.15.1->sentence-transformers) (6.0.1)
+Requirement already satisfied: requests in c:\users\nili\anaconda3\lib\site-packages (from huggingface-hub>=0.15.1->sentence-transformers) (2.31.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in c:\users\nili\anaconda3\lib\site-packages (from huggingface-hub>=0.15.1->sentence-transformers) (4.9.0)
+Requirement already satisfied: sympy in c:\users\nili\anaconda3\lib\site-packages (from torch>=1.11.0->sentence-transformers) (1.12)
+Requirement already satisfied: networkx in c:\users\nili\anaconda3\lib\site-packages (from torch>=1.11.0->sentence-transformers) (3.1)
+Requirement already satisfied: jinja2 in c:\users\nili\anaconda3\lib\site-packages (from torch>=1.11.0->sentence-transformers) (3.1.3)
+Collecting mkl<=2021.4.0,>=2021.1.1 (from torch>=1.11.0->sentence-transformers)
+  Downloading mkl-2021.4.0-py2.py3-none-win_amd64.whl.metadata (1.4 kB)
+Requirement already satisfied: colorama in c:\users\nili\anaconda3\lib\site-packages (from tqdm->sentence-transformers) (0.4.6)
+Requirement already satisfied: regex!=2019.12.17 in c:\users\nili\anaconda3\lib\site-packages (from transformers<5.0.0,>=4.34.0->sentence-transformers) (2023.10.3)
+Collecting tokenizers<0.20,>=0.19 (from transformers<5.0.0,>=4.34.0->sentence-transformers)
+  Downloading tokenizers-0.19.1-cp311-none-win_amd64.whl.metadata (6.9 kB)
+Collecting safetensors>=0.4.1 (from transformers<5.0.0,>=4.34.0->sentence-transformers)
+  Downloading safetensors-0.4.3-cp311-none-win_amd64.whl.metadata (3.9 kB)
+Requirement already satisfied: joblib>=1.1.1 in c:\users\nili\anaconda3\lib\site-packages (from scikit-learn->sentence-transformers) (1.2.0)
+Requirement already satisfied: threadpoolctl>=2.0.0 in c:\users\nili\anaconda3\lib\site-packages (from scikit-learn->sentence-transformers) (2.2.0)
+Collecting intel-openmp==2021.* (from mkl<=2021.4.0,>=2021.1.1->torch>=1.11.0->sentence-transformers)
+  Downloading intel_openmp-2021.4.0-py2.py3-none-win_amd64.whl.metadata (1.2 kB)
+Collecting tbb==2021.* (from mkl<=2021.4.0,>=2021.1.1->torch>=1.11.0->sentence-transformers)
+  Downloading tbb-2021.12.0-py3-none-win_amd64.whl.metadata (1.1 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\nili\anaconda3\lib\site-packages (from jinja2->torch>=1.11.0->sentence-transformers) (2.1.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\nili\anaconda3\lib\site-packages (from requests->huggingface-hub>=0.15.1->sentence-transformers) 
+(3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\nili\anaconda3\lib\site-packages (from requests->huggingface-hub>=0.15.1->sentence-transformers) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\nili\anaconda3\lib\site-packages (from requests->huggingface-hub>=0.15.1->sentence-transformers) (2.0.7)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\nili\anaconda3\lib\site-packages (from requests->huggingface-hub>=0.15.1->sentence-transformers) (2024.2.2)
+Requirement already satisfied: mpmath>=0.19 in c:\users\nili\anaconda3\lib\site-packages (from sympy->torch>=1.11.0->sentence-transformers) (1.3.0)
+Downloading sentence_transformers-2.7.0-py3-none-any.whl (171 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 171.5/171.5 kB 1.1 MB/s eta 0:00:00
+Downloading huggingface_hub-0.22.2-py3-none-any.whl (388 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 388.9/388.9 kB 1.2 MB/s eta 0:00:00
+Downloading mkl-2021.4.0-py2.py3-none-win_amd64.whl (228.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.5/228.5 MB 689.5 kB/s eta 0:00:00
+Downloading intel_openmp-2021.4.0-py2.py3-none-win_amd64.whl (3.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 4.2 MB/s eta 0:00:00
+Downloading tbb-2021.12.0-py3-none-win_amd64.whl (286 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 286.4/286.4 kB 2.9 MB/s eta 0:00:00
+Downloading safetensors-0.4.3-cp311-none-win_amd64.whl (287 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 287.3/287.3 kB 2.9 MB/s eta 0:00:00
+Downloading tokenizers-0.19.1-cp311-none-win_amd64.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 3.9 MB/s eta 0:00:00
+Installing collected packages: tbb, intel-openmp, safetensors, mkl, torch, huggingface-hub, tokenizers, transformers, sentence-transformers
+Successfully installed huggingface-hub-0.22.2 intel-openmp-2021.4.0 mkl-2021.4.0 safetensors-0.4.3 sentence-transformers-2.7.0 tbb-2021.12.0 tokenizers-0.19.1 torch-2.3.0 transformers-4.40.1
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING>
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING>
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING>
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING> pip install openai
+Collecting openai
+  Downloading openai-1.23.6-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: anyio<5,>=3.5.0 in c:\users\nili\anaconda3\lib\site-packages (from openai) (4.2.0)
+Requirement already satisfied: distro<2,>=1.7.0 in c:\users\nili\anaconda3\lib\site-packages (from openai) (1.8.0)
+Collecting httpx<1,>=0.23.0 (from openai)
+  Downloading httpx-0.27.0-py3-none-any.whl.metadata (7.2 kB)
+Requirement already satisfied: pydantic<3,>=1.9.0 in c:\users\nili\anaconda3\lib\site-packages (from openai) (1.10.12)
+Requirement already satisfied: sniffio in c:\users\nili\anaconda3\lib\site-packages (from openai) (1.3.0)
+Requirement already satisfied: tqdm>4 in c:\users\nili\anaconda3\lib\site-packages (from openai) (4.65.0)
+Requirement already satisfied: typing-extensions<5,>=4.7 in c:\users\nili\anaconda3\lib\site-packages (from openai) (4.9.0)
+Requirement already satisfied: certifi in c:\users\nili\anaconda3\lib\site-packages (from httpx<1,>=0.23.0->openai) (2024.2.2)
+Collecting httpcore==1.* (from httpx<1,>=0.23.0->openai)
+  Downloading httpcore-1.0.5-py3-none-any.whl.metadata (20 kB)
+Collecting h11<0.15,>=0.13 (from httpcore==1.*->httpx<1,>=0.23.0->openai)
+  Downloading h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Requirement already satisfied: colorama in c:\users\nili\anaconda3\lib\site-packages (from tqdm>4->openai) (0.4.6)
+Downloading openai-1.23.6-py3-none-any.whl (311 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 311.6/311.6 kB 1.1 MB/s eta 0:00:00
+Downloading httpx-0.27.0-py3-none-any.whl (75 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.6/75.6 kB 1.0 MB/s eta 0:00:00
+Downloading httpcore-1.0.5-py3-none-any.whl (77 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.9/77.9 kB 615.3 kB/s eta 0:00:00
+Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 kB 510.8 kB/s eta 0:00:00
+Installing collected packages: h11, httpcore, httpx, openai
+Successfully installed h11-0.14.0 httpcore-1.0.5 httpx-0.27.0 openai-1.23.6
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING> pip --version     
+pip 23.3.1 from C:\Users\NILI\anaconda3\Lib\site-packages\pip (python 3.11)
+PS C:\Users\NILI\Desktop\Code-Games-2024\Code\HR-RESUME-SCREENING> 
+
+C:\Users\NILI\anaconda3\Lib\site-packages\huggingface_hub\file_download.py:148: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently
+ store duplicated files but your machine does not support them in C:\Users\NILI\.cache\huggingface\hub\models--sentence-transformers--all-MiniLM-L6-v2. 
+ Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled 
+by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to see activate developer 
+mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+
+
+
+
+model.safetensors: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 90.9M/90.9M [00:14<00:00, 6.43MB/s]
+C:\Users\NILI\anaconda3\Lib\site-packages\huggingface_hub\file_download.py:148: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\NILI\.cache\huggingface\hub\models--sentence-transformers--all-MiniLM-L6-v2. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to see activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+tokenizer_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 350/350 [00:00<?, ?B/s]
+vocab.txt: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 1.07MB/s]
+tokenizer.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 466k/466k [00:00<00:00, 763kB/s]
+special_tokens_map.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 112/112 [00:00<?, ?B/s]
+1_Pooling/config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 190/190 [00:00<?, ?B/s]
+2024-04-28 12:05:31.386 Uncaught app exception
+Traceback (most recent call last):
+  File "C:\Users\NILI\anaconda3\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 584, in _run_script
+    exec(code, module.__dict__)
+  File "C:\Users\NILI\Documents\HR-RESUME-SCREENING\app.py", line 73, in <module>
+    main()
+  File "C:\Users\NILI\Documents\HR-RESUME-SCREENING\app.py", line 41, in main
+    push_to_pinecone("71adf081-aace-4ee4-be84-0a9076ad361e","gcp-starter","test",embeddings,final_docs_list)
+  File "C:\Users\NILI\Documents\HR-RESUME-SCREENING\utils.py", line 50, in push_to_pinecone
+    pinecone.init(
+  File "C:\Users\NILI\anaconda3\Lib\site-packages\pinecone\deprecation_warnings.py", line 38, in init
+    raise AttributeError(msg)
+AttributeError: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+
+pinecone.core.client.exceptions.PineconeApiException: (400)
+Reason: Bad Request
+HTTP response headers: HTTPHeaderDict({'Date': 'Sun, 28 Apr 2024 10:09:16 GMT', 'Content-Type': 'application/json', 'Content-Length': '102', 'Connection': 'keep-alive', 'x-pinecone-request-latency-ms': '189', 'x-pinecone-request-id': '438320666547342540', 'x-envoy-upstream-service-time': '190', 
+'server': 'envoy'})
+HTTP response body: {"code":3,"message":"Vector dimension 384 does not match the dimension of the index 512","details":[]}
+
+
+
+pinecone.core.client.exceptions.PineconeApiException: (400)
+Reason: Bad Request
+HTTP response headers: HTTPHeaderDict({'Date': 'Sun, 28 Apr 2024 10:17:36 GMT', 'Content-Type': 'application/json', 'Content-Length': '103', 'Connection': 'keep-alive', 'x-pinecone-request-latency-ms': '173', 'x-pinecone-request-id': '8733307934277808182', 'x-envoy-upstream-service-time': '171', 'server': 'envoy'})
+HTTP response body: {"code":3,"message":"Vector dimension 384 does not match the dimension of the index 1536","details":[]}
+
+
+
+
+
+A note on credits
+Because this phone number is associated with an existing account, you will not receive additional free API credits.
+
+Please upgrade to a paid plan to start using the API. If you need further assistance, please contact us through our help center at https://help.openai.com.
